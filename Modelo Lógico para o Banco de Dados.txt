@@ -1,0 +1,74 @@
+Modelo Lógico para o Banco de Dados
+O modelo lógico pode ser representado com as seguintes tabelas:
+
+Tabela clientes:
+
+Campos:
+id_cliente (PK, chave primária, auto-increment)
+razao_social (nome da empresa)
+id_estado (FK, chave estrangeira para a tabela estados)
+Tabela telefones:
+
+Campos:
+id_telefone (PK, chave primária, auto-increment)
+id_cliente (FK, chave estrangeira para a tabela clientes)
+numero_telefone (número do telefone)
+id_tipo_telefone (FK, chave estrangeira para a tabela tipos_telefone)
+Tabela tipos_telefone:
+
+Campos:
+id_tipo_telefone (PK, chave primária, auto-increment)
+descricao_tipo (descrição do tipo de telefone, ex: celular, comercial)
+Tabela estados:
+
+Campos:
+id_estado (PK, chave primária)
+uf (sigla do estado, ex: SP, RJ)
+nome_estado (nome do estado completo)
+Relacionamentos:
+A tabela clientes tem um relacionamento 1
+com a tabela telefones, já que um cliente pode ter vários telefones.
+A tabela telefones tem um relacionamento N:1 com a tabela tipos_telefone, onde cada telefone tem um tipo associado.
+A tabela clientes tem um relacionamento N:1 com a tabela estados, pois cada cliente está em um estado.
+
+Esquema:
+clientes
+---------
+id_cliente (PK)
+razao_social
+id_estado (FK)
+
+telefones
+---------
+id_telefone (PK)
+id_cliente (FK)
+numero_telefone
+id_tipo_telefone (FK)
+
+tipos_telefone
+---------
+id_tipo_telefone (PK)
+descricao_tipo
+
+estados
+---------
+id_estado (PK)
+uf
+nome_estado
+
+
+Exemplo de Consulta SQL:
+Para listar o código, razão social e telefone(s) de todos os clientes do estado de São Paulo (código "SP"), a consulta SQL seria:
+
+SELECT 
+    c.id_cliente, 
+    c.razao_social, 
+    t.numero_telefone
+FROM 
+    clientes c
+JOIN 
+    telefones t ON c.id_cliente = t.id_cliente
+JOIN 
+    estados e ON c.id_estado = e.id_estado
+WHERE 
+    e.uf = 'SP';

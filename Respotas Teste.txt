@@ -1,0 +1,17 @@
+Resposta questão 1 = O valor da variável SOMA será 77.
+
+Resposta questão 2 = a) 9 b) 128 c) 49 d) 100 e) 13 f) 20
+
+Resposta questão 3 = Sistema faturamento.js
+
+Resposta questão 4 = Modelo Lógico para o banco de dados.txt
+
+
+Resposta questão 5 - 
+
+Calculo Tempo Distância(125) / Velocidade Total(170) ≈0,7353 horas = 44,12 minutos
+
+O carro leva 15 minutos adicionais devido aos pedágios. Portanto, o tempo total que ele vai demorar para chegar ao ponto de encontro será o tempo de 44,12 minutos mais os 15 minutos de atraso, resultando em 59,12 minutos.
+Como o caminhão possui um dispositivo de cobrança automática, ele não sofre nenhum atraso devido aos pedágios. Portanto, seu tempo de encontro será de 44,12 minutos, sem alterações.
+
+Mesmo com o impacto dos pedágios, ambos os veículos estarão exatamente na mesma posição na rodovia no momento em que se cruzarem. Portanto, os dois veículos estarão à mesma distância de Ribeirão Preto quando se encontrarem, já que o ponto de encontro depende apenas de suas velocidades relativas e não do tempo adicional do carro.
